@@ -36,14 +36,14 @@ $DateBtn.Add_Click({Time_Stamp})
 
 $TxtBtn = New-Object System.Windows.Forms.Button
 	$TxtBtn.Location = New-Object System.Drawing.Point(100,30)
-	$TxtBtn.Size = New-Object System.Drawing.Size(50,30)
+	$TxtBtn.Size = New-Object System.Drawing.Size(100,30)
 	$TxtBtn.Text = "All Check"
 $Form.Controls.Add($TxtBtn)
 $TxtBtn.Add_Click({Txt_Open})
 
 $ClearBtn = New-Object System.Windows.Forms.Button
 	$ClearBtn.Location = New-Object System.Drawing.Point(150,30)
-	$ClearBtn.Size = New-Object System.Drawing.Size(50,30)
+	$ClearBtn.Size = New-Object System.Drawing.Size(100,30)
 	$ClearBtn.Text = "All Del"
 $Form.Controls.Add($ClearBtn)
 $ClearBtn.Add_Click({Txt_Clear})
