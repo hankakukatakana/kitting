@@ -16,7 +16,7 @@ function Txt_Clear(){
     New-Item .\Result.txt -ItemType file -Force
 }
 function GetJson(){
-    $JsonDate = (Get-Content ".\Desktop")
+    $JsonDate = (Get-Content ".\installurl.json")
 }
 
 $Form = New-Object System.Windows.Forms.Form
