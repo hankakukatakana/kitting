@@ -2,19 +2,27 @@
 Add-Type -AssemblyName System.Drawing
 Add-Type -AssemblyName System.Windows.Forms
 
-New-Item .\Result.txt -ItemType file -Force
 
-function Time_Stamp(){
-	$Time = (Get-Date).ToString("HH:mm")
-    $Stamp.Text = "$Time"
-    Write-Output $Time |Add-Content .\Result.txt
+function Get-UrlsFromJson {
+    param (
+        [string]$JsonFilePath
+    )
+
+    # JSONファイルを読み取り、配列に変換
+    $data = Get-Content $JsonFilePath | ConvertFrom-Json
+
+    # 配列内の各オブジェクトからURLを取得して返す
+    $urls = $data | ForEach-Object { $_.url }
+    
+    return $urls
 }
-function Txt_Open(){
-    .\Result.txt
-}
-function Txt_Clear(){
-    New-Item .\Result.txt -ItemType file -Force
-}
+
+# JSONファイルからURLを取得
+$urls = Get-UrlsFromJson -JsonFilePath "C:\Path\To\urls.json"
+
+# 取得したURLを表示
+$urls
+
 function GetJson(){
     $JsonDate = (Get-Content ".\install.json")
 }
