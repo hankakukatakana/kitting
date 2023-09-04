@@ -18,5 +18,13 @@
 	{
 		"name":"firefox",
 		"url":"https://support.mozilla.org/ja/kb/how-download-and-install-firefox-windows?redirect=no"
+	},
+	{
+		"name":"ISL",
+		"url":"https://vm-islo-m1.radix.ad.jp/users/main/downloads.html"
+	},
+	{
+		"name":"IPMS",
+		"url":"https://forest.watch.impress.co.jp/library/software/ipmsg/"
 	}
 }
