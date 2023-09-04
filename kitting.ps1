@@ -7,13 +7,10 @@ function Get-UrlsFromJson {
     param (
         [string]$JsonFilePath
     )
-
     # JSONファイルを読み取り、配列に変換
     $data = Get-Content $JsonFilePath | ConvertFrom-Json
-
     # 配列内の各オブジェクトからURLを取得して返す
     $urls = $data | ForEach-Object { $_.url }
-    
     return $urls
 }
 
